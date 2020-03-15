@@ -417,7 +417,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1416733594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a9e79fe49fc574b85f0e23d4b49339, type: 3}
+  m_Script: {fileID: 11500000, guid: 566425d9a76a5a444a1386c7917d96b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foodItems:
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1708297397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f17e84b44d1ab1245984988cd1b0a0c3, type: 3}
+  m_Script: {fileID: 11500000, guid: fe32e61d520d9b04c94dee220e10fd7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &1708297400
