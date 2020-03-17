@@ -4,8 +4,10 @@
 public class PlaySeeker : MonoBehaviour
 {
     [SerializeField] private float maxSpeed;
+    [SerializeField] private float maxDist;
 
     private Rigidbody rbody;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,12 +44,17 @@ public class PlaySeeker : MonoBehaviour
 
     public Vector3 PlaySeek(Vector3 targetPosition)
     {
-        var desired = targetPosition - rbody.position;
-        desired.Normalize();
-        desired *= maxSpeed;
-        var steer = desired - rbody.velocity;
-        steer = Vector3.ClampMagnitude(steer, maxSpeed);
-        return steer;
+        if (maxDist > Vector3.Distance(rbody.position, rbody.position))
+        {
+            var desired = targetPosition - rbody.position;
+            desired.Normalize();
+            desired *= maxSpeed;
+            var steer = desired - rbody.velocity;
+            steer = Vector3.ClampMagnitude(steer, maxSpeed);
+            return steer;
+        }
+        else { return rbody.position; }
+        
     }
 
     public void UpdateplaySeeker(PlaySeeker[] playSeekers, float gap, Vector3 targerPosition)

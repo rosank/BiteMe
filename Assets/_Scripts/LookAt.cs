@@ -12,6 +12,6 @@ public class LookAt : MonoBehaviour
         transform.LookAt(target);
 
         // Same as above, but setting the worldUp parameter to Vector3.left in this example turns the camera on its side
-        transform.LookAt(target, Vector3.up);
+        //transform.LookAt(target, Vector3.up);
     }
 }
